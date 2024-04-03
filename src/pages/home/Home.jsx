@@ -2,6 +2,7 @@ import Header from "../share/header/Header";
 import Leftside from "../share/leftside/Leftside";
 import Navbar from "../share/navabr/Navbar";
 import Right from "../share/rightside/Right";
+import Breakingnews from "./Breakingnews";
 
 
 
@@ -9,6 +10,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
+            <Breakingnews></Breakingnews>
             <Navbar></Navbar>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-5">
                 <div>
