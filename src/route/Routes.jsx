@@ -8,6 +8,7 @@ import Login from "../login/Login";
 import Register from "../register/Register";
 import Home from "../pages/home/Home";
 import Newspage from "../pages/newspage/Newspage";
+import Privateroute from "./Privateroute";
 
   const router = createBrowserRouter([
     {
@@ -17,12 +18,12 @@ import Newspage from "../pages/newspage/Newspage";
          {
             path:"/",
             element: <Home></Home>,
-            loader: ()=>fetch('news.json')
+            loader: ()=>fetch('/news.json')
             
          },
          {
               path: '/news/:id',
-              element:<Newspage></Newspage>
+              element:<Privateroute><Newspage></Newspage></Privateroute>
          },
          {
            path: '/login',
