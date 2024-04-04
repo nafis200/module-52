@@ -7,6 +7,8 @@ const Navbar = () => {
       <li><NavLink to="/node_modules">Home</NavLink></li>
       <li><NavLink to="/about">About</NavLink></li>
       <li><NavLink to="/career">Carrer</NavLink></li>
+      <li><NavLink to="/login">Login</NavLink></li>
+      <li><NavLink to="/register">Register</NavLink></li>
       
     </>
     return (
@@ -33,7 +35,7 @@ const Navbar = () => {
         </div>
       </div>
 
-    <Link>
+    <Link to ="/login">
       <button className="btn">Login</button>
     </Link>
   </div>
