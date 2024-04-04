@@ -3,9 +3,11 @@ import {
     createBrowserRouter,
   } from "react-router-dom";
 import Roots from "../layout/Roots";
-import Home from "../pages/home/Home";
+
 import Login from "../login/Login";
 import Register from "../register/Register";
+import Home from "../pages/home/Home";
+import Newspage from "../pages/newspage/Newspage";
 
   const router = createBrowserRouter([
     {
@@ -13,8 +15,14 @@ import Register from "../register/Register";
       element: <Roots></Roots>,
       children:[
          {
-            path: '/',
-            element: <Home></Home>
+            path:"/",
+            element: <Home></Home>,
+            loader: ()=>fetch('news.json')
+            
+         },
+         {
+              path: '/news/:id',
+              element:<Newspage></Newspage>
          },
          {
            path: '/login',
@@ -23,7 +31,7 @@ import Register from "../register/Register";
          {
            path:'/register',
            element:<Register></Register>
-         }
+         },
       ]
     },
   ]);
